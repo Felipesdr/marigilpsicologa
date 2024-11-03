@@ -1,0 +1,330 @@
+body{
+    background-color: #E9E1DC;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    color: var(--Coral-escuro, #3B1B16);
+    font-family: Judson;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+}
+
+h3{
+    color: var(--Coral-principal, #D17165);
+    font-family: Judson;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 10px;
+}
+
+header{
+    padding-top: 85px;
+    padding-left: 200px;
+    padding-right: 180px;
+    background-color: #E9E1DC;
+}
+
+.conteudo{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 19px;
+    border-bottom: 1px solid #D17165;
+}
+
+.titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo h1 {
+    width: 457px;
+    color: #D17165;
+    text-align: center;
+    font-family: Judson;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.busca{
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 210px;
+    height: 32px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    border: 2px solid #D17165;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.busca input[type="search"] {
+    width: 80%;
+    height: 90%;
+    padding: 10px;
+    font-size: 14px;
+    color: #D17165;
+    font-family: Judson;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border: none;
+    border-radius: 15px;
+    border-radius: 4px;
+    box-sizing: border-box; /* Garante que o padding não altere a largura do input */
+    background: #E9E1DC;
+}
+
+.busca input[type="search"]{
+    background: #E9E1DC;
+    height: 20px;
+    outline: none;
+    width: 170px;
+}
+
+.busca input[type="search"]:focus {
+    background: #E9E1DC;
+    height: 20px;
+    outline: none;
+    width: 170px;
+}
+
+input[type="search"]::placeholder {
+    color: rgba(209, 113, 101, 0.40);
+    font-family: Judson;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.busca button{
+    height: 90%;
+    border: none;
+    border-radius: 15px;
+    background-color: #E9E1DC;
+}
+
+main{
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top:  10px;
+    padding-bottom: 48px;
+    background-color: #E9E1DC ;
+    height: 100%;
+}
+
+.text-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-header-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.autor-informacao{
+    margin-top: 15px;
+    display: flex;
+    align-content: center;
+}
+
+.autor-informacao p{
+    color: var(--Coral-principal, #D17165);
+    font-family: Judson;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    align-content: center;
+    margin-left: 10px;
+}
+
+.corpo-texto p{
+    color: #000;
+    font-family: Judson;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 10px;
+    overflow: auto;
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow-wrap: break-word; /* Compatível com navegadores mais novos */
+    white-space: normal;
+}
+/*FOOTER*/
+.footer-container {
+    box-sizing: border-box;
+    background-color: #E9E1DC;
+    padding-left: 320px;
+    padding-right: 320px;
+}
+
+.footer{
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.footer-esquerdo h2{
+    flex-shrink: 0;
+    color: #D17165;
+    text-align: justify;
+    font-family: Judson;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+}
+.footer-contato-titulo{
+    display: flex;
+}
+
+.footer-esquerdo-contatos{
+    display: flex;
+    margin-top: -30px;
+}
+
+.footer-esquerdo-contatos-icone{
+    margin-right: 45px;
+}
+
+.footer-direito{
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+
+.footer-baixo{
+    display: flex;
+    background-color: #E9E1DC;
+    border-top: 1px solid #D17165;
+    color: #D17165;
+    text-align: justify;
+    font-family: Judson;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    padding: 5px;
+    padding: 5px;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+/* Estilos para dispositivos pequenos (smartphones em modo retrato) */
+@media only screen and (max-width: 599px) {
+
+    main {
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+    }
+    header{
+        padding-top: 25px;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+    }
+
+    header .conteudo {
+        flex-direction: column;
+    }
+
+    .logo{
+        margin-bottom: 20px;
+    }
+
+    .text-header-right img{
+        max-width: 110px !important;
+        max-height: 79px !important;
+    }
+
+    .busca{
+        display: none;
+    }
+
+    .corpo-texto {
+        margin-top: 20px;
+    }
+
+    .corpo-texto h1{
+        font-size: 24px;
+    }
+    .corpo-texto h3{
+        font-size: 20px;
+    }
+
+    .corpo-texto p{
+        font-size: 16px;
+    }
+
+    .titulo h1 {
+        width: 100%px;
+        color: #D17165;
+        text-align: center;
+        font-family: Judson;
+        font-size: 26px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .footer-container{
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+    }
+
+    .footer{
+        border-top: 1px solid #D17165;
+        padding-top: 10px;
+        justify-content: center;
+    }
+    .footer-esquerdo h2{
+        font-size: 18px;
+    }
+
+    .footer-esquerdo-contatos-icone{
+        margin-right: 22.5px;
+    }
+
+    .footer-direito{
+        display: none;
+    }
+
+    .footer-baixo{
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1800px) {
+    .conteudo{
+        width: 80%;
+        margin: 0 auto;
+    }
+    main{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+}
+
+

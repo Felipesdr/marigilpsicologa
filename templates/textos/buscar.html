@@ -1,0 +1,177 @@
+{% load custom_tags %}
+{% load custom_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static '/styles/textos.css'%}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"></script>
+</head>
+<body>
+<header>
+    <div class="conteudo">
+        <div class="logo">
+            <a href="{% url 'index' %}">
+                <img src="{% static '/assets/svg/logo.svg'%}" alt="">
+            </a>
+        </div>
+        <div class="titulo">
+            <h1> Algumas reflexões sobre o comportamento humano e aquilo que nos faz únicos</h1>
+        </div>
+        <div class="busca">
+            <form action="{% url 'buscar' %}">
+                <input name="buscar" type="search" placeholder="Pequisar um texto...">
+                <button type="submit">
+                    <img src="{% static '/assets/svg/icone-busca.svg'%}" alt="">
+                </button>
+            </form>
+        </div>
+    </div>
+</header>
+<main>
+    <div>
+        <a href="{% url 'textos' %}">
+            <img src="{% static '/assets/svg/seta-esquerda.png' %}">
+        </a>
+    </div>
+    {% if textos_filtrados %}
+        {% for artigo in textos_filtrados %}
+            {% if forloop.counter|is_odd %}
+                <div class="texto1">
+                    <div class="texto1-img">
+                        <img src="{{ artigo.imagem.url }}" alt="" style="max-width: 275px; max-height: 200px" class="text-image">
+                    </div>
+                    <div class="texto2-conteudo">
+                        <div class="text-image-container">
+                            <h3>{{ artigo.titulo }}</h3>
+                            <img src="{{ artigo.imagem.url }}" alt="" style="max-width: 69px; max-height: 50px" class="text-image-mobile">
+                        </div>
+                        <span class="texto1-conteudo-subtitle">{{artigo.sub_titulo}}</span>
+                        <p>{{ artigo.conteudo }}</p>
+                        <a href="{% url 'texto' artigo.id %}">Veja mais</a>
+                    </div>
+                </div>
+            {% else %}
+                <div class="texto2">
+                    <div class="texto2-conteudo">
+                        <div class="text-image-container"r>
+                            <h3>{{artigo.titulo}}</h3>
+                            <img src="{{ artigo.imagem.url }}" alt="" style="max-width: 69px; max-height: 50px" class="text-image-mobile">
+                        </div>
+                        <span class="texto2-conteudo-subtitle">{{artigo.sub_titulo}}</span>
+                        <p>{{ artigo.conteudo }}</p>
+                        <a href="{% url 'texto' artigo.id %}">Veja mais</a>
+                    </div>
+                    <div class="texto2-img">
+                        <img src="{{ artigo.imagem.url }}" alt="" style="max-width: 275px; max-height: 200px" class="text-image">
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        <div>
+            <h1>Nenhum texto encontrado</h1>
+        </div>
+    {% endif %}
+    <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a href="?page=1">&laquo;</a>
+                <a href="?page={{ page_obj.previous_page_number }}">&lsaquo;</a>
+            {% endif %}
+        
+                <span class="current">
+                    Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}
+                </span>
+            
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">&rsaquo;</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}">&raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+</main>
+{#FOOTER#}
+<div class="footer-container">
+    <div class="footer">
+        <div class="footer-esquerdo">
+            <div class="footer-contato-titulo">
+                <h2>Ficou com alguma duvida?</h2>
+                <img src="{% static  '/assets/svg/contatos-flecha.svg'%}" alt="">
+            </div>
+            <div class="footer-esquerdo-contatos">
+                <div class="footer-esquerdo-contatos-icone">
+                    <a href="#">
+                        <img src="{% static '/assets/svg/contatos-whatsapp.svg'%}" alt="">
+                    </a>
+                </div>
+                <div class="footer-esquerdo-contatos-icone">
+                    <a href="#">
+                        <img src="{% static '/assets/svg/contatos-instagram.svg'%}" alt="">
+                    </a>
+                </div>
+                <div class="footer-esquerdo-contatos-icone">
+                    <a href="#">
+                        <img src="{% static '/assets/svg/contatos-gmail.svg'%}" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-direito">
+            <a href="/">
+                <img src="{% static '/assets/svg/contatos-logomg.svg'%}" alt="">
+            </a>
+        </div>
+    </div>
+</div>
+<div class="footer-baixo">
+    <span>© 2024 Psicóloga Mariana Gil orgulhosamento criado por Felipe Santana de rose</span>
+</div>
+</body>
+<script>
+    function elementoAparecePelaEsquerdaAoScrollar(classeElemento, delay = 0){
+        gsap.from(classeElemento, {
+            scrollTrigger: classeElemento,
+            opacity :0,
+            x : -150,
+            duration: 1,
+            delay : delay
+        })
+    }
+    function elementoAparecePelaDireitaAoScrollar(classeElemento, delay = 0){
+        gsap.from(classeElemento, {
+            scrollTrigger: classeElemento,
+            opacity :0,
+            x : 150,
+            duration: 1,
+            delay : delay
+        })
+    }
+    function elementoApareceDeBaixoAoScrollar(classeElemento){
+        gsap.from(classeElemento, {
+            scrollTrigger: classeElemento,
+            opacity :0,
+            y : 100,
+            duration: 1
+        })
+    }
+    function elementoApareceDeCimaAoScrollar(classeElemento){
+        gsap.from(classeElemento, {
+            scrollTrigger: classeElemento,
+            opacity :0,
+            y : -100,
+            duration: 1
+        })
+    }
+    elementoAparecePelaEsquerdaAoScrollar('.texto1-img', 0.5)
+    elementoAparecePelaDireitaAoScrollar('.texto1-conteudo', 0.5)
+    elementoAparecePelaEsquerdaAoScrollar('.texto2-img', 1)
+    elementoAparecePelaDireitaAoScrollar('.texto2-conteudo', 1)
+    elementoAparecePelaEsquerdaAoScrollar('.footer-esquerdo')
+    elementoAparecePelaDireitaAoScrollar('.footer-direito')
+</script>
+</html>

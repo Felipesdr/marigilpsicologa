@@ -1,0 +1,742 @@
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    padding: 8px 16px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none !important;
+}
+/*HEADER LAYOUT*/
+button{
+    border-style: none;
+}
+
+ul{
+    list-style: none;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../assets/svg/topo-imagem-fundo.svg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 740px;
+    flex-shrink: 0;
+    z-index: 1;
+}
+.color-salmon{
+    color: #D17165;
+}
+
+.topo-conteudo{
+    display: flex;
+    padding-left: 320px;
+    padding-right: 320px;
+    width: 100%;
+    height: 100%;
+}
+
+.topo-lado-esquerdo{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 150px;
+
+}
+
+.topo-lado-esquerdo-logo{
+    margin-bottom: 74px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-container{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}
+
+.topo-lado-esquerdo-logo img{
+    width: 82px;
+    height: 43px;
+}
+
+
+
+.topo-lado-esquerdo h1{
+    color: var(--Beje-principal, #E9E1DC);
+    font-family: Judson;
+    font-size: 55px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    width: 325px;
+    /*height: 100px;*/
+    flex-shrink: 0;
+}
+
+.topo-lado-esquerdo p{
+    width: 298px;
+    flex-shrink: 0;
+    color: #FAD8C6;
+    font-style: italic;
+    font-family: Judson;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom:7px;
+    margin-top: 20px;
+}
+
+.topo-lado-esquerdo-subtitulo{
+    color: #FFF;
+    font-family: Judson;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.topo-lado-esquerdo-botao{
+    border-radius: 10px;
+    background: #E9E1DC;
+    border: 2px solid #D17165 ;
+}
+
+.topo-lado-esquerdo-botao a:hover{
+    font-size: 18px;
+    width: 225px;
+    height: 45px;
+    font-weight: 600;
+}
+
+.topo-lado-esquerdo-botao a {
+    display: flex;
+    width: 185px;
+    height: 28px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #E9E1DC;
+    color: #D17165;
+    font-family: Judson;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    transition: 0.4s ease-in-out;
+}
+
+.topo-lado-direito{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    padding-bottom: 150px;
+}
+
+.topo-lado-direito nav ul{
+    display: flex;
+    width:100%;
+    height: 21px;
+    flex-shrink: 0;
+    margin-left: auto;
+    justify-content: end;
+}
+
+.topo-lado-direito nav ul li a,
+.navbar-container nav ul li a{
+    font-family: Judson;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 19px;
+    color: #E9E1DC;
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+.topo-lado-direito nav ul li a:hover{
+    font-size: 18px;
+    color: #FAD8C6;
+    font-size: 20px;
+}
+
+.topo-lado-direito-img{
+    margin-left: 45px;
+    /*margin-right: 52px;*/
+}
+
+.topo-onda-escura{
+    z-index: 2;
+    display: flex;
+    margin-top: -20px;
+}
+.topo-onda-escura img{
+    max-width: 100%;
+}
+
+.custom-offcanvas{
+    width: 50% !important;
+    background-color: #E9E1DC !important;
+}
+
+.custom-offcanvas a{
+    color: #D17165 !important;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1040; /* Deve ser menor que o offcanvas */
+}
+/* Estilos para dispositivos pequenos (smartphones em modo retrato) */
+@media only screen and (max-width: 599px) {
+    .topo-conteudo{
+        padding-left: 15px;
+        padding-right: 15px;
+        flex-wrap: wrap-reverse;
+        width: 100%;
+    }
+
+    .topo-lado-esquerdo{
+        flex: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .topo-lado-esquerdo-logo{
+        margin-bottom: 37px;
+    }
+
+    .topo-lado-esquerdo-botao a {
+        display: flex;
+        width: 185px;
+        height: 28px;
+        padding: 5px;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: #E9E1DC;
+        color: #D17165;
+        font-family: Judson;
+        font-size: 14px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .topo-lado-esquerdo p{
+        font-size: 14px;
+        width: 285px;
+    }
+    .topo-lado-esquerdo-subtitulo{
+        font-size: 16px;
+    }
+
+    .topo-lado-esquerdo h1{
+        font-size: 38px;
+    }
+
+    .topo-lado-direito{
+        display: none;
+    }
+}
+/*CORPO PRINCIPAL*/
+main{
+    height: 100%;
+    width: 100%;
+    background: #E9E1DC;
+    padding-left: 320px;
+    padding-right: 320px;
+}
+
+/*QUEM SOU EU*/
+.quem-sou-eu{
+    display: flex;
+    flex-direction: row;
+    padding-top: 55px;
+}
+.quem-sou-eu-texto{
+    flex: 1;
+}
+
+.quem-sou-eu-texto h2{
+    color: #D17165;
+    text-align: justify;
+    font-family: Judson;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 10px;
+}
+
+.quem-sou-eu-texto p{
+    color:  #3B1B16;
+    font-family: Judson;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+}
+.quem-sou-eu-img{
+    flex: 1;
+    display: flex;
+    justify-content: start;
+    box-sizing: border-box;
+}
+
+/*Psicoterapia*/
+.psicoterapia{
+    margin-top: 86px;
+    display: flex;
+    flex-direction: column;
+}
+
+.psicoterapia-titutlo{
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+    background-image: url('../assets/svg/psicoterapia-fundo-titulo.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 7px;
+}
+
+.psicoterapia-titutlo h2{
+    display: flex;
+    width: 146.879px;
+    height: 43.577px;
+    transform: rotate(-6.437deg);
+    justify-content: end;
+    flex-shrink: 0;
+    color: #E9E1DC;
+    font-family: Judson;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 20px;
+    padding-left: 15px;
+}
+
+.psicoterapia-conteudo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.psicoterapia-conteudo-esquerdo{
+    margin-top: 150px;
+}
+
+.psicoterapia-conteudo-direito{
+    margin-top: 395px;
+}
+
+.psicoterapia-conteudo-direito-topico,
+.psicoterapia-conteudo-esquerdo-topico{
+    margin-bottom: 415px;
+}
+.psicoterapia-conteudo-esquerdo-topico-mobile h4,
+.psicoterapia-conteudo-direito-topico h4,
+.psicoterapia-conteudo-esquerdo-topico h4{
+    color:  #3B1B16;
+    font-family: Judson;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 0;
+}
+
+.psicoterapia-conteudo-esquerdo-topico-mobile,
+.psicoterapia-conteudo-esquerdo-topico p,
+.psicoterapia-conteudo-direito-topico p{
+    display: flex;
+    width: 275px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #D17165;
+    font-family: Judson;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+
+.psicoterapia-conteudo-direito-topico p,
+.psicoterapia-conteudo-direito-topico h4{
+    text-align: end;
+}
+
+.psicoterapia-conteudo-esquerdo-topico-mobile{
+    display: none;
+}
+
+/* Estilos para dispositivos pequenos (smartphones em modo retrato) */
+@media only screen and (max-width: 599px) {
+    main{
+        margin-top: -5px;
+        height: 100%;
+        width: 100%;
+        background: #E9E1DC;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .quem-sou-eu{
+        flex-wrap: wrap-reverse;
+        padding-top: 25px;
+    }
+
+    .quem-sou-eu-texto{
+        margin-bottom: 20px;
+    }
+
+    .quem-sou-eu-texto h2{
+        margin-bottom: 5px;
+        font-size: 26px;
+    }
+
+    .quem-sou-eu-texto p{
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+
+    .quem-sou-eu-img{
+        justify-content: center;
+    }
+
+    .psicoterapia{
+        margin-top: 43px;
+        display: flex;
+        flex-direction: column;
+    }
+    .psicoterapia-conteudo-esquerdo-topico-mobile h4,
+    .psicoterapia-conteudo-direito-topico h4,
+    .psicoterapia-conteudo-esquerdo-topico h4{
+        font-size: 18px;
+    }
+
+    .psicoterapia-conteudo-esquerdo-topico-mobile p,
+    .psicoterapia-conteudo-direito-topico p,
+    .psicoterapia-conteudo-esquerdo-topico p{
+        font-size: 14px;
+    }
+    .psicoterapia-conteudo-esquerdo{
+        margin-top: 175px;
+    }
+
+    .psicoterapia-conteudo-esquerdo-topico{
+        margin-bottom: 160px;
+    }
+
+    .psicoterapia-conteudo-esquerdo-topico-mobile{
+        margin-bottom: 150px;
+        display: flex;
+        padding-top: 25px;
+    }
+
+    .psicoterapia-conteudo-direito{
+        display: none;
+    }
+}
+/*ARTIGOS*/
+section{
+    background-image: url('../assets/svg/artigos-fundo.svg');
+    height: 100%px;
+    box-sizing: border-box;
+    background-size: cover;
+    background-color: #E9E1DC;
+    margin-top: -190px;
+    padding-left: 320px;
+    padding-right: 320px;
+    padding-top: 100px;
+}
+
+.artigos h2{
+    height: 25px;
+    flex-shrink: 0;
+    color: #E9E1DC;
+    text-align: justify;
+    font-family: Judson;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.artigos-conteudo{
+    margin-top: 18px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.artigos-conteudo-card{
+    display: flex;
+    align-items: end;
+    justify-content: flex-start;
+    padding: 9px;
+    width: calc(33.33% - 10px);
+    height: 186px;
+    background-color: rgba(217, 217, 217, 0.9);
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background-blend-mode: soft-light;
+    margin-bottom: 10px;
+    border-radius: 14px;
+    border: 1px solid var(--Coral-escuro, #3B1B16);
+}
+
+.artigos-conteudo-card-texto{
+    width: 100%;
+    padding-right: 10px;
+
+}
+
+.artigos-conteudo-card-texto h5{
+    color: #3B1B16;
+    font-family: Judson;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    transition: 0.4s ease;
+}
+
+.artigos-conteudo-card-texto h5:hover{
+    color: #3B1B16;
+    font-family: Judson;
+    font-size: 21px;
+}
+
+.artigos-conteudo-card-texto p{
+    margin-top: 10px;
+    color: #3B1B16;
+    font-family: Judson;
+    font-size: 14px;
+    font-style: italic;
+    line-height: normal;
+}
+
+.ver-todos-os-textos{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.ver-todos-os-textos a{
+    color: #E9E1DC;
+}
+
+/* Estilos para dispositivos pequenos (smartphones em modo retrato) */
+@media only screen and (max-width: 599px) {
+
+    section{
+        margin-top: -80px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 80px;
+        width: 100%;
+    }
+
+    .artigos h2{
+        font-size: 26px
+    }
+
+    .artigos-conteudo{
+        margin-top: 18px;
+        width: 100%;
+        height: 100%;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .artigos-conteudo-card{
+        width: 100%;
+    }
+}
+/*FOOTER*/
+.footer-container {
+    box-sizing: border-box;
+    background-color: #E9E1DC;
+    padding-left: 320px;
+    padding-right: 320px;
+}
+
+.footer{
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.footer-esquerdo h2{
+    flex-shrink: 0;
+    color: #D17165;
+    text-align: justify;
+    font-family: Judson;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+}
+.footer-contato-titulo{
+    display: flex;
+}
+
+.footer-esquerdo-contatos{
+    display: flex;
+    margin-top: -30px;
+}
+
+.footer-esquerdo-contatos-icone{
+    margin-right: 45px;
+}
+
+.footer-direito{
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+
+.footer-baixo{
+    display: flex;
+    background-color: #E9E1DC;
+    border-top: 1px solid #D17165;
+    color: #D17165;
+    text-align: justify;
+    font-family: Judson;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    padding: 5px;
+    padding: 5px;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+/* Estilos para dispositivos pequenos (smartphones em modo retrato) */
+@media only screen and (max-width: 599px) {
+
+    .footer-container {
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+    }
+
+    .footer{
+        padding-top: 10px;
+        justify-content: center;
+    }
+
+    .footer-esquerdo h2{
+        font-size: 18px;
+    }
+
+    .footer-esquerdo-contatos-icone{
+        margin-right: 22.5px;
+    }
+
+    .footer-direito{
+        display: none;
+    }
+
+    .footer-baixo{
+        padding-left: 15px;
+        padding-right: 15px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+}
+/*Telas grandes*/
+@media (min-width: 1800px) {
+    header{
+        height: 1000px;
+    }
+    .topo-conteudo{
+        padding-left: 320px;
+        padding-right: 320px;
+        width: 80%;
+        height: 100%;
+    }
+    .topo-lado-esquerdo{
+        padding-bottom: 300px!important;
+    }
+    .topo-lado-direito{
+        padding-bottom: 300px!important;
+    }
+    .quem-sou-eu{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .psicoterapia{
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 100px!important;
+    }
+    .artigos{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .artigos-conteudo{
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 18px;
+    }
+    .footer{
+        width: 80%;
+        margin: 0 auto;
+    }
+}
