@@ -112,19 +112,19 @@ header{
     color: #FAD8C6;
     font-style: italic;
     font-family: Judson;
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 20px;
+    font-weight: 500;
     line-height: normal;
-    margin-bottom:7px;
+    margin-bottom:10px;
     margin-top: 20px;
 }
 
 .topo-lado-esquerdo-subtitulo{
-    color: #FFF;
+    color: #fff;
     font-family: Judson;
-    font-size: 18px;
+    font-size: 16px;
     font-style: italic;
-    font-weight: 500;
+    font-weight: 400;
     line-height: normal;
 }
 
@@ -269,8 +269,9 @@ header{
         line-height: normal;
     }
     .topo-lado-esquerdo p{
-        font-size: 14px;
-        width: 285px;
+        font-size: 18px;
+        width: 260px;
+        margin-bottom: 10px;
     }
     .topo-lado-esquerdo-subtitulo{
         font-size: 16px;
