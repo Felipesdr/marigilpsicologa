@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = bool(os.getenv('DEBUG'))
 
 ALLOWED_HOSTS = []
 
@@ -87,7 +87,7 @@ DATABASES = {
     }
 }
 
-DATABASES["default"] = dj_database_url.parse("postgresql://marigil_db_user:tARBuBlN2vLgAQ2dBniNWDWZAbvQJvuX@dpg-csjs53a3esus7388sfu0-a.oregon-postgres.render.com/marigil_db")
+DATABASES["default"] = dj_database_url.parse(str(os.getenv('DATABASE_URL')))
 
 
 
