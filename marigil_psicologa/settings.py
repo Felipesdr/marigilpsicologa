@@ -155,8 +155,8 @@ STORAGES = {
 
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
-MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
+STATIC_URL = f'https://marigil-imagens.s3.amazonaws.com/static/'
+MEDIA_URL = f'https://marigil-imagens.s3.amazonaws.com/media/'
 
 
 # Default primary key field type
