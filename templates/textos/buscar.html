@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="{% static '/styles/textos.css'%}">
+    <link rel="stylesheet" href="{% static 'styles/textos.css'%}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"></script>
@@ -16,7 +16,7 @@
     <div class="conteudo">
         <div class="logo">
             <a href="{% url 'index' %}">
-                <img src="{% static '/assets/svg/logo.svg'%}" alt="">
+                <img src="{% static 'assets/svg/logo.svg'%}" alt="">
             </a>
         </div>
         <div class="titulo">
@@ -26,7 +26,7 @@
             <form action="{% url 'buscar' %}">
                 <input name="buscar" type="search" placeholder="Pequisar um texto...">
                 <button type="submit">
-                    <img src="{% static '/assets/svg/icone-busca.svg'%}" alt="">
+                    <img src="{% static 'assets/svg/icone-busca.svg'%}" alt="">
                 </button>
             </form>
         </div>
@@ -35,7 +35,7 @@
 <main>
     <div>
         <a href="{% url 'textos' %}">
-            <img src="{% static '/assets/svg/seta-esquerda.png' %}">
+            <img src="{% static 'assets/svg/seta-esquerda.png' %}">
         </a>
     </div>
     {% if textos_filtrados %}
@@ -101,29 +101,29 @@
         <div class="footer-esquerdo">
             <div class="footer-contato-titulo">
                 <h2>Ficou com alguma duvida?</h2>
-                <img src="{% static  '/assets/svg/contatos-flecha.svg'%}" alt="">
+                <img src="{% static  'assets/svg/contatos-flecha.svg'%}" alt="">
             </div>
             <div class="footer-esquerdo-contatos">
                 <div class="footer-esquerdo-contatos-icone">
                     <a href="#">
-                        <img src="{% static '/assets/svg/contatos-whatsapp.svg'%}" alt="">
+                        <img src="{% static 'sets/svg/contatos-whatsapp.svg'%}" alt="">
                     </a>
                 </div>
                 <div class="footer-esquerdo-contatos-icone">
                     <a href="#">
-                        <img src="{% static '/assets/svg/contatos-instagram.svg'%}" alt="">
+                        <img src="{% static 'assets/svg/contatos-instagram.svg'%}" alt="">
                     </a>
                 </div>
                 <div class="footer-esquerdo-contatos-icone">
                     <a href="#">
-                        <img src="{% static '/assets/svg/contatos-gmail.svg'%}" alt="">
+                        <img src="{% static 'assets/svg/contatos-gmail.svg'%}" alt="">
                     </a>
                 </div>
             </div>
         </div>
         <div class="footer-direito">
             <a href="/">
-                <img src="{% static '/assets/svg/contatos-logomg.svg'%}" alt="">
+                <img src="{% static 'assets/svg/contatos-logomg.svg'%}" alt="">
             </a>
         </div>
     </div>
