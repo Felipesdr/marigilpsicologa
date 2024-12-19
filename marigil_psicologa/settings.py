@@ -157,7 +157,8 @@ STORAGES = {
 
 STATIC_URL = 'https://marigil-imagens.s3.amazonaws.com/static/'
 MEDIA_URL = 'https://marigil-imagens.s3.amazonaws.com/media/'
-
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
