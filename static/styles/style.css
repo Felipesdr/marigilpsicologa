@@ -1,4 +1,9 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Judson:ital,wght@0,400;0,700;1,400&display=swap');
+.playwrite-es-deco-guides-regular {
+    font-family: "Playwrite ES Deco Guides", serif !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+}
 .menu {
     display: none;
     position: absolute;
@@ -92,36 +97,34 @@ header{
     height: 43px;
 }
 
-
-
 .topo-lado-esquerdo h1{
     color: var(--Beje-principal, #E9E1DC);
-    font-family: Judson;
-    font-size: 55px;
-    font-style: italic;
-    font-weight: 400;
-    line-height: normal;
+    font-family: Judson, serif !important;
+    font-size: 55px ;
+    font-style: italic !important;
+    font-weight: 400 !important;
+    line-height: normal !important;
     width: 325px;
     /*height: 100px;*/
     flex-shrink: 0;
 }
 
 .topo-lado-esquerdo p{
-    width: 298px;
     flex-shrink: 0;
     color: #FAD8C6;
     font-style: italic;
-    font-family: Judson;
-    font-size: 20px;
+    font-family: Judson , serif !important;
+    font-size: 17px;
     font-weight: 500;
     line-height: normal;
     margin-bottom:10px;
     margin-top: 20px;
+    width: 325px;
 }
 
 .topo-lado-esquerdo-subtitulo{
     color: #fff;
-    font-family: Judson;
+    font-family: Judson , serif !important;
     font-size: 16px;
     font-style: italic;
     font-weight: 400;
@@ -131,7 +134,6 @@ header{
 .topo-lado-esquerdo-botao{
     border-radius: 10px;
     background: #E9E1DC;
-    border: 2px solid #D17165 ;
 }
 
 .topo-lado-esquerdo-botao a:hover{
@@ -143,7 +145,7 @@ header{
 
 .topo-lado-esquerdo-botao a {
     display: flex;
-    width: 185px;
+    width: 210px;
     height: 28px;
     padding: 10px;
     justify-content: center;
@@ -153,7 +155,7 @@ header{
     border-radius: 10px;
     background: #E9E1DC;
     color: #D17165;
-    font-family: Judson;
+    font-family: Judson, serif !important;
     font-size: 16px;
     font-style: italic;
     font-weight: 400;
@@ -182,7 +184,7 @@ header{
 
 .topo-lado-direito nav ul li a,
 .navbar-container nav ul li a{
-    font-family: Judson;
+    font-family: Judson, serif !important;
     font-size: 18px;
     font-weight: 400;
     line-height: normal;
@@ -231,6 +233,10 @@ header{
 }
 /* Estilos para dispositivos pequenos (smartphones em modo retrato) */
 @media only screen and (max-width: 599px) {
+    h1, h2, h3, h4, h5, p {
+        font-family: Judson, serif !important;
+    }
+
     .topo-conteudo{
         padding-left: 15px;
         padding-right: 15px;
@@ -262,7 +268,7 @@ header{
         border-radius: 10px;
         background: #E9E1DC;
         color: #D17165;
-        font-family: Judson;
+        font-family: Judson !important;
         font-size: 14px;
         font-style: italic;
         font-weight: 400;
@@ -270,7 +276,7 @@ header{
     }
     .topo-lado-esquerdo p{
         font-size: 18px;
-        width: 260px;
+        width: 100%;
         margin-bottom: 10px;
     }
     .topo-lado-esquerdo-subtitulo{
@@ -279,6 +285,7 @@ header{
 
     .topo-lado-esquerdo h1{
         font-size: 38px;
+        width: 100%;
     }
 
     .topo-lado-direito{
@@ -307,7 +314,7 @@ main{
 .quem-sou-eu-texto h2{
     color: #D17165;
     text-align: justify;
-    font-family: Judson;
+    font-family: Judson !important;
     font-size: 30px;
     font-style: italic;
     font-weight: 400;
@@ -317,7 +324,7 @@ main{
 
 .quem-sou-eu-texto p{
     color:  #3B1B16;
-    font-family: Judson;
+    font-family: Judson !important;
     font-size: 18px;
     font-style: italic;
     font-weight: 400;
@@ -356,7 +363,7 @@ main{
     justify-content: end;
     flex-shrink: 0;
     color: #E9E1DC;
-    font-family: Judson;
+    font-family: Judson !important;
     font-size: 22px;
     font-style: italic;
     font-weight: 400;
@@ -380,13 +387,19 @@ main{
 
 .psicoterapia-conteudo-direito-topico,
 .psicoterapia-conteudo-esquerdo-topico{
-    margin-bottom: 415px;
+    margin-bottom: 315px;
 }
+.psicoterapia-conteudo-direito-topico{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
 .psicoterapia-conteudo-esquerdo-topico-mobile h4,
 .psicoterapia-conteudo-direito-topico h4,
 .psicoterapia-conteudo-esquerdo-topico h4{
     color:  #3B1B16;
-    font-family: Judson;
+    font-family: Judson !important;
     font-size: 22px;
     font-style: italic;
     font-weight: 400;
@@ -403,7 +416,7 @@ main{
     justify-content: center;
     flex-shrink: 0;
     color: #D17165;
-    font-family: Judson;
+    font-family: Judson !important;
     font-size: 18px;
     font-style: italic;
     font-weight: 400;
@@ -447,7 +460,7 @@ main{
 
     .quem-sou-eu-texto p{
         margin-bottom: 5px;
-        font-size: 14px;
+        font-size: 15px;
     }
 
     .quem-sou-eu-img{
@@ -468,18 +481,18 @@ main{
     .psicoterapia-conteudo-esquerdo-topico-mobile p,
     .psicoterapia-conteudo-direito-topico p,
     .psicoterapia-conteudo-esquerdo-topico p{
-        font-size: 14px;
+        font-size: 15px;
     }
     .psicoterapia-conteudo-esquerdo{
         margin-top: 175px;
     }
 
     .psicoterapia-conteudo-esquerdo-topico{
-        margin-bottom: 160px;
+        margin-bottom: 90px;
     }
 
     .psicoterapia-conteudo-esquerdo-topico-mobile{
-        margin-bottom: 150px;
+        margin-bottom: 100px;
         display: flex;
         padding-top: 25px;
     }
@@ -506,7 +519,7 @@ section{
     flex-shrink: 0;
     color: #E9E1DC;
     text-align: justify;
-    font-family: Judson;
+    font-family: Judson !important;
     font-size: 30px;
     font-style: italic;
     font-weight: 400;
@@ -546,7 +559,7 @@ section{
 
 .artigos-conteudo-card-texto h5{
     color: #3B1B16;
-    font-family: Judson;
+    font-family: Judson !important;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
@@ -556,14 +569,14 @@ section{
 
 .artigos-conteudo-card-texto h5:hover{
     color: #3B1B16;
-    font-family: Judson;
+    font-family: Judson !important;
     font-size: 21px;
 }
 
 .artigos-conteudo-card-texto p{
     margin-top: 10px;
     color: #3B1B16;
-    font-family: Judson;
+    font-family: Judson !important;
     font-size: 14px;
     font-style: italic;
     line-height: normal;
@@ -626,7 +639,7 @@ section{
     flex-shrink: 0;
     color: #D17165;
     text-align: justify;
-    font-family: Judson;
+    font-family: Judson !important;
     font-size: 24px;
     font-style: italic;
     font-weight: 400;
@@ -657,7 +670,7 @@ section{
     border-top: 1px solid #D17165;
     color: #D17165;
     text-align: justify;
-    font-family: Judson;
+    font-family: Judson !important;
     font-size: 12px;
     font-style: italic;
     font-weight: 400;
@@ -670,7 +683,9 @@ section{
 
 /* Estilos para dispositivos pequenos (smartphones em modo retrato) */
 @media only screen and (max-width: 599px) {
-
+    body, h1, h2, h3, h4, h5, p {
+        font-family: Judson !important;
+    }
     .footer-container {
         padding-left: 15px;
         padding-right: 15px;
